@@ -1,0 +1,3 @@
+^.*\.Rproj$
+^\.Rproj\.user$
+^generate_rd\.py$

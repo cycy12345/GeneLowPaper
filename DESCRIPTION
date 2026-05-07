@@ -1,0 +1,62 @@
+Package: Gene_low_paper
+Type: Package
+Title: Single Gene Pan-Cancer Analysis Pipeline for Low-Impact Papers
+Version: 0.1.0
+Author: Your Name
+Maintainer: Your Name <your.email@example.com>
+Description: A comprehensive pipeline for single gene pan-cancer analysis
+    including differential expression, survival analysis, clinical correlation,
+    immune infiltration, enrichment analysis, and single-cell visualization.
+    Designed to facilitate rapid bioinformatics analysis workflows.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.2.3
+Depends:
+    R (>= 4.0.0)
+Imports:
+    DESeq2,
+    limma,
+    edgeR,
+    data.table,
+    TCGAplot,
+    ggpubr,
+    tidyverse,
+    ggvenn,
+    RColorBrewer,
+    rms,
+    survival,
+    survminer,
+    CyDataPro,
+    clusterProfiler,
+    org.Hs.eg.db,
+    GSVA,
+    IOBR,
+    Seurat,
+    SCNT,
+    SeuratExtend,
+    CellChat,
+    ggplot2,
+    stringr,
+    tibble,
+    dplyr,
+    tidyr,
+    stats,
+    grDevices,
+    gridExtra,
+    ggforce,
+    ggbeeswarm,
+    ggsignif,
+    ggalluvial,
+    ezcox,
+    broom,
+    scales,
+    forcats,
+    igraph,
+    patchwork,
+    purrr,
+    methods
+Suggests:
+    knitr,
+    rmarkdown,
+    testthat
