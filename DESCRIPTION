@@ -1,4 +1,4 @@
-Package: Gene_low_paper
+Package: GeneLowPaper
 Type: Package
 Title: Single Gene Pan-Cancer Analysis Pipeline for Low-Impact Papers
 Version: 0.1.0

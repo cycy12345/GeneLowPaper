@@ -3,7 +3,7 @@
 <!-- badges: start -->
 <!-- badges: end -->
 
-**Gene_low_paper** 是一个专为 "单基因泛癌低分文章" 分析流程设计的 R 包。它将原始的 `Single_Gene_Low_paper_folw.R` 脚本中的全部功能模块化封装，提供了从**泛癌差异表达、预后分析、临床相关性、功能富集、免疫浸润到单细胞可视化**的一站式分析函数。
+**GeneLowPaper** 是一个专为 "单基因泛癌低分文章" 分析流程设计的 R 包。它将原始的 `Single_Gene_Low_paper_folw.R` 脚本中的全部功能模块化封装，提供了从**泛癌差异表达、预后分析、临床相关性、功能富集、免疫浸润到单细胞可视化**的一站式分析函数。
 
 ---
 
@@ -24,10 +24,10 @@ BiocManager::install(c("DESeq2", "limma", "edgeR", "org.Hs.eg.db",
 # remotes::install_github("your/SeuratExtend")
 
 # 2. 从本地安装 GeneLowPaper
-devtools::install("path/to/Gene_low_paper")
+devtools::install("path/to/GeneLowPaper")
 
 # 3. 生成帮助文档（可选，如果 .Rd 文件尚未生成）
-devtools::document("path/to/Gene_low_paper")
+devtools::document("path/to/GeneLowPaper")
 ```
 
 ---
@@ -52,7 +52,7 @@ devtools::document("path/to/Gene_low_paper")
 以下工作流完全对应原始脚本 `work_pipline.R` 的分析流程，以 **IL36RN** 在 **肺腺癌 (LUAD)** 中的分析为例。
 
 ```r
-library("Gene_low_paper")
+library(GeneLowPaper)
 
 # 设置全局配色
 color_dis <- color_dis_default
