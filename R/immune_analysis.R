@@ -310,7 +310,7 @@ Fig5_Est_IPS <- function(gene,
         x = paste0(gene, " Expression"),
         y = "Score", fill = "", color = ""
       ) +
-      ggpubr::theme_test(base_rect_size = 1.5) +
+      theme_test(base_rect_size = 1.5) +
       mytheme +
       theme(
         legend.position = "top",
@@ -485,7 +485,7 @@ Fig5_ICC_cor <- function(gene,
     ) +
     ggplot2::labs(x = "", y = "Correlation Coefficient (r)", fill = "") +
     ggplot2::coord_flip() +
-    ggpubr::theme_test(base_rect_size = 1.5) +
+    theme_test(base_rect_size = 1.5) +
     mytheme +
     ggplot2::theme(legend.position = "top")
 

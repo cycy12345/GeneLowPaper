@@ -62,7 +62,7 @@ Fig1A_Pancer <- function(gene, plotWidth = 12, plotHeight = 6,
       vjust = 1,
       hide.ns = TRUE, size = 7
     ) +
-    ggpubr::theme_test(base_rect_size = 1.5) +
+    theme_test(base_rect_size = 1.5) +
     mytheme +
     labs(x = "", y = "Gene Expression Level", fill = "", color = "") +
     theme(
@@ -175,7 +175,7 @@ Fig1B_PanKM <- function(gene, plotWidth = 6, plotHeight = 8,
       censor = TRUE,
       palette = color_dis[2:1],
       legend.title = i,
-      ggtheme = ggpubr::theme_test(base_rect_size = 1.5) + mytheme,
+      ggtheme = theme_test(base_rect_size = 1.5) + mytheme,
       font.x = 15, font.y = 15, font.title = 15,
       legend.labs = c(
         paste0("Low ", "(", fit$n[1], ")"),

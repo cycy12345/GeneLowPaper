@@ -113,7 +113,7 @@ Fig2D_TCGA_Clin <- function(TCGA_pro = "LUAD", gene,
           x = paste0(gene, " Expression"), y = "Prob", fill = "",
           title = var, subtitle = paste0("p = ", round(p, 3))
         ) +
-        ggpubr::theme_test(base_rect_size = 1.5) +
+        theme_test(base_rect_size = 1.5) +
         mytheme +
         scale_fill_manual(values = color_dis) +
         theme(

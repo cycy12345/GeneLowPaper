@@ -44,7 +44,7 @@ sc_basicPlot <- function(scPath = NULL,
     raster_dpi = 1000
   ) +
     labs(color = "CellType") +
-    ggpubr::theme_test(base_size = 1.5) +
+    theme_test(base_size = 1.5) +
     mytheme
 
   CyDataPro::save_plot(p,
@@ -59,7 +59,7 @@ sc_basicPlot <- function(scPath = NULL,
     assay_layer = "data",
     standardize = TRUE
   ) +
-    ggpubr::theme_test(base_rect_size = 1.5) +
+    theme_test(base_rect_size = 1.5) +
     mytheme
 
   CyDataPro::save_plot(p,
@@ -70,7 +70,7 @@ sc_basicPlot <- function(scPath = NULL,
   p <- SeuratExtend::DimPlot2(
     sce, pt.size = 1,
     features = gene,
-    theme = ggpubr::theme_test(base_size = 1.5) +
+    theme = theme_test(base_size = 1.5) +
       mytheme +
       theme(plot.title = element_text(hjust = 0.5))
   )
@@ -387,13 +387,13 @@ gene_Cellchat2 <- function(scPath = NULL,
       weight.MinMax = weight.MinMax,
       label.size = 6, font.size.title = 20
     ) +
-      mytheme
+      mytheme+theme(legend.position = "top")
   }
 
   p <- patchwork::wrap_plots(plots = gg)
   CyDataPro::save_plot(p,
     filename = paste0(outpath, "/传入与传出细胞差异"),
-    style = "g", width = 12, height = 6
+    style = "g", width = 10, height = 6
   )
 
   gg1 <- CellChat::rankNet(cellchat,
@@ -406,6 +406,6 @@ gene_Cellchat2 <- function(scPath = NULL,
 
   CyDataPro::save_plot(gg1,
     filename = paste0(outpath, "/信号通路信息流差异"),
-    style = "g", height = 4, width = 12
+    style = "g", height = 4, width = 16
   )
 }

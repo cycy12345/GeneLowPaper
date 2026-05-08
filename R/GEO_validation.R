@@ -253,7 +253,7 @@ Fig2A_GEO_KM <- function(GSE = "GSE31210", gene = "TP53",
     censor = TRUE,
     palette = color_dis[2:1],
     legend.title = GSE,
-    ggtheme = ggpubr::theme_test(base_rect_size = 1.5) + mytheme,
+    ggtheme = theme_test(base_rect_size = 1.5) + mytheme,
     font.x = 15, font.y = 15, font.title = 15,
     legend.labs = c(
       paste0("Low ", "(", fit$n[1], ")"),
