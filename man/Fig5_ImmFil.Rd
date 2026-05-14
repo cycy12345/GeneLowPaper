@@ -9,31 +9,23 @@ Calculates the correlation between target gene expression and immune cell
 infiltration scores using multiple algorithms via \pkg{IOBR}.
 
 
-Default is \code{"mrna"}.
-
-Default is 0.3.
-
 \code{"mcpcounter"}, \code{"epic"}, \code{"xcell"}, \code{"cibersort"},
 
-\code{"cibersort_abs"}, \code{"quantiseq"}, or \code{"timer"}.
-
-Default is \code{"mcpcounter"}.
-
-Default is \code{"F:/BioMed/预分析/data/TCGA"}.
+\code{"cibersort_abs"}, \code{"quantiseq"}, or \code{"timer"}. Default is \code{"mcpcounter"}.
 }
 \usage{
-Fig5_ImmFil(gene, TCGA_pro = "LUAD", gene_type = "mrna", outdir = "./", plotWidth = 8, plotHeight = 6, corr_cut = 0.3, Imm_method = c("mcpcounter", "epic", "xcell", "cibersort", "cibersort_abs", "quantiseq", "timer"), data_dir = "F:/BioMed/预分析/data/TCGA", color_dis = color_dis_default)
+Fig5_ImmFil(gene, TCGA_pro = "LUAD", gene_type = "mrna", outdir = "./", plotWidth = 6, plotHeight = 6, corr_cut = 0.3, Imm_method = c("mcpcounter", "epic", "xcell", "cibersort", "cibersort_abs", "quantiseq", "timer"), data_dir = "F:/BioMed/预分析/data/TCGA", color_dis = color_dis_default)
 }
 \arguments{
   \item{gene}{Character. Target gene symbol.}
   \item{TCGA_pro}{Character. TCGA project abbreviation, e.g. \code{"LUAD"}.}
-  \item{gene_type}{Character. Gene type: \code{"mrna"}, \code{"lncrna"}, or \code{"mirna"}.}
+  \item{gene_type}{Character. Gene type: \code{"mrna"}, \code{"lncrna"}, or \code{"mirna"}. Default is \code{"mrna"}.}
   \item{outdir}{Character. Output directory. Default is \code{"./"}.}
   \item{plotWidth}{Numeric. Plot width. Default is 8.}
   \item{plotHeight}{Numeric. Plot height. Default is 6.}
-  \item{corr_cut}{Numeric. Absolute correlation coefficient threshold for filtering.}
+  \item{corr_cut}{Numeric. Absolute correlation coefficient threshold for filtering. Default is 0.3.}
   \item{Imm_method}{Character. Immune deconvolution method. One of}
-  \item{data_dir}{Character. Root directory of TCGA data.}
+  \item{data_dir}{Character. Root directory of TCGA data. Default is \code{"F:/BioMed/预分析/data/TCGA"}.}
   \item{color_dis}{Character vector. Color palette. Defaults to \code{color_dis_default}.}
 }
 \details{

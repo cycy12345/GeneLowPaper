@@ -10,11 +10,9 @@ stratified by high/low expression of the target gene.
 
 
 Default is \code{"mrna"}.
-
-Default is \code{"F:/BioMed/预分析/data/TCGA"}.
 }
 \usage{
-Fig5_Est_IPS(gene, TCGA_pro = "LUAD", gene_type = "mrna", outdir = "./", plotWidth = 6, plotHeight = 6.5, data_dir = "F:/BioMed/预分析/data/TCGA", color_dis = color_dis_default)
+Fig5_Est_IPS(gene, TCGA_pro = "LUAD", gene_type = "mrna", outdir = "./", plotWidth = 6, plotHeight = 6, data_dir = "F:/BioMed/预分析/data/TCGA", color_dis = color_dis_default)
 }
 \arguments{
   \item{gene}{Character. Target gene symbol.}
@@ -22,8 +20,8 @@ Fig5_Est_IPS(gene, TCGA_pro = "LUAD", gene_type = "mrna", outdir = "./", plotWid
   \item{gene_type}{Character. Gene type: \code{"mrna"}, \code{"lncrna"}, or \code{"mirna"}.}
   \item{outdir}{Character. Output directory. Default is \code{"./"}.}
   \item{plotWidth}{Numeric. Plot width. Default is 6.}
-  \item{plotHeight}{Numeric. Plot height. Default is 6.5.}
-  \item{data_dir}{Character. Root directory of TCGA data.}
+  \item{plotHeight}{Numeric. Plot height. Default is 6.}
+  \item{data_dir}{Character. Root directory of TCGA data. Default is \code{"F:/BioMed/预分析/data/TCGA"}.}
   \item{color_dis}{Character vector. Color palette. Defaults to \code{color_dis_default}.}
 }
 \value{

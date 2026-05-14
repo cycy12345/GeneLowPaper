@@ -9,32 +9,26 @@ Computes the correlation between target gene expression and 79 immune
 checkpoint genes (PMID: 32814346) in TCGA tumor samples.
 
 
-Default is \code{"mrna"}.
-
 Default is \code{"pearson"}.
-
-Default is \code{"F:/BioMed/预分析/data/TCGA"}.
-
-Default is \code{"F:/BioMed/预分析/data/IGG79Gene.csv"}.
 
 
 plus the bar plot.
 }
 \usage{
-Fig5_ICC_cor(gene, TCGA_pro = "LUAD", gene_type = "mrna", cor_method = "pearson", p_threshold = 0.05, r_threshold = 0, outdir = "./", plotWidth = 10, plotHeight = 10, data_dir = "F:/BioMed/预分析/data/TCGA", icc_path = "F:/BioMed/预分析/data/IGG79Gene.csv", color_dis = color_dis_default)
+Fig5_ICC_cor(gene, TCGA_pro = "LUAD", gene_type = "mrna", cor_method = "pearson", p_threshold = 0.05, r_threshold = 0, outdir = "./", plotWidth = 6, plotHeight = 6, data_dir = "F:/BioMed/预分析/data/TCGA", icc_path = "F:/BioMed/预分析/data/IGG79Gene.csv", color_dis = color_dis_default)
 }
 \arguments{
   \item{gene}{Character. Target gene symbol.}
   \item{TCGA_pro}{Character. TCGA project abbreviation. Default is \code{"LUAD"}.}
-  \item{gene_type}{Character. Gene type: \code{"mrna"}, \code{"lncrna"}, or \code{"mirna"}.}
+  \item{gene_type}{Character. Gene type: \code{"mrna"}, \code{"lncrna"}, or \code{"mirna"}. Default is \code{"mrna"}.}
   \item{cor_method}{Character. Correlation method: \code{"pearson"} or \code{"spearman"}.}
   \item{p_threshold}{Numeric. P-value threshold. Default is 0.05.}
   \item{r_threshold}{Numeric. Correlation coefficient threshold. Default is 0.}
   \item{outdir}{Character. Output directory. Default is \code{"./"}.}
-  \item{plotWidth}{Numeric. Plot width. Default is 10.}
-  \item{plotHeight}{Numeric. Plot height. Default is 10.}
-  \item{data_dir}{Character. Root directory of TCGA data.}
-  \item{icc_path}{Character. Path to the immune checkpoint gene list CSV.}
+  \item{plotWidth}{Numeric. Plot width. Default is 6.}
+  \item{plotHeight}{Numeric. Plot height. Default is 6.}
+  \item{data_dir}{Character. Root directory of TCGA data. Default is \code{"F:/BioMed/预分析/data/TCGA"}.}
+  \item{icc_path}{Character. Path to the immune checkpoint gene list CSV. Default is \code{"F:/BioMed/预分析/data/IGG79Gene.csv"}.}
   \item{color_dis}{Character vector. Color palette. Defaults to \code{color_dis_default}.}
 }
 \value{

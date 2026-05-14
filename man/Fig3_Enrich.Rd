@@ -12,9 +12,11 @@ expressed between high and low expression groups of a target gene in TCGA data.
 Default is \code{"mRNA"}.
 
 Default is \code{"F:/BioMed/预分析/data/TCGA"}.
+
+Default is \code{"F:/BioMed/预分析/data/KEGG/KEGG_hsa_data.Rds"}.
 }
 \usage{
-Fig3_Enrich(TCGA_pro = "LUAD", gene = "TP53", gene_type = "mRNA", outdir = "./", plotWidth = NULL, plotHeight = 8, logFC_cut = 0.58, pvalue_cut = 0.05, data_dir = "F:/BioMed/预分析/data/TCGA", color_dis = color_dis_default)
+Fig3_Enrich(TCGA_pro = "LUAD", gene = "TP53", gene_type = "mRNA", outdir = "./", kegg_data_path = "F:/BioMed/预分析/data/KEGG/KEGG_hsa_data.Rds", plotWidth = NULL, plotHeight = 8, logFC_cut = 0.58, pvalue_cut = 0.05, data_dir = "F:/BioMed/预分析/data/TCGA", color_dis = color_dis_default)
 }
 \arguments{
   \item{TCGA_pro}{Character. TCGA project abbreviation, e.g. \code{"LUAD"}.}
@@ -26,6 +28,7 @@ Fig3_Enrich(TCGA_pro = "LUAD", gene = "TP53", gene_type = "mRNA", outdir = "./",
   \item{logFC_cut}{Numeric. logFC threshold for DEG filtering. Default is 0.58.}
   \item{pvalue_cut}{Numeric. P-value threshold for DEG filtering. Default is 0.05.}
   \item{data_dir}{Character. Root directory of TCGA data.}
+  \item{kegg_data_path}{Character. Path to KEGG GSON data file (.Rds) for offline enrichment.}
   \item{color_dis}{Character vector. Color palette. Defaults to \code{color_dis_default}.}
 }
 \details{
