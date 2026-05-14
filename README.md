@@ -199,6 +199,43 @@ gene_Cellchat2(
   plotWidth = 8, plotHeight = 6,
   color_dis = color_dis
 )
+
+# ========== 15. 单细胞基因分组差异与富集 (Figure 6D) ==========
+sc_GeneEnrichr(
+  scPath = "F:/Pritect_ana/115_IL36RN_肺腺癌/data/NSCLC_GSE148071_Single.Rds",
+  gene = gene,
+  Tar_celltype = "Malignant",
+  pvlCut = 0.05, avgFC_cut = 0.3,
+  organism = "hsa",
+  kegg_data_path = "F:/BioMed/预分析/data/KEGG/KEGG_hsa_data.Rds",
+  showterms = 6,
+  outdir = "./",
+  plotWidth = 6, plotHeight = 6,
+  color_dis = color_dis
+)
+
+# ========== 16. Slingshot 拟时序轨迹分析 (Figure 6E) ==========
+sc_slingshot(
+  scPath = "F:/Pritect_ana/115_IL36RN_肺腺癌/data/NSCLC_GSE148071_Single.Rds",
+  gene = gene,
+  cell_start = NULL,
+  cell_end = NULL,
+  Reduction = "UMAP",
+  outdir = "./",
+  plotWidth = 6, plotHeight = 6,
+  color_dis = color_dis
+)
+
+# ========== 17. Dorothea 转录因子活性分析 (Figure 6F) ==========
+sc_dorotheaTF(
+  scPath = "F:/Pritect_ana/115_IL36RN_肺腺癌/data/NSCLC_GSE148071_Single.Rds",
+  gene = gene,
+  Tar_celltype = "Malignant",
+  topTF = 25,
+  outdir = "./",
+  plotWidth = 8, plotHeight = 4,
+  color_dis = color_dis
+)
 ```
 
 ---
@@ -263,6 +300,9 @@ F:/BioMed/预分析/data/IGG79Gene.csv
 | `sc_basicPlot()` | 单细胞注释 UMAP + 基因 DotPlot + FeaturePlot | Fig 6A |
 | `gene_Cellchat1()` | 单基因细胞通讯网络图 | Fig 6B |
 | `gene_Cellchat2()` | 基因高/低组通讯差异对比 | Fig 6C |
+| `sc_GeneEnrichr()` | 单细胞基因分组差异 + 火山图 + GO/KEGG 富集 | Fig 6D |
+| `sc_slingshot()` | Slingshot 拟时序轨迹分析 | Fig 6E |
+| `sc_dorotheaTF()` | Dorothea 转录因子活性热图 | Fig 6F |
 
 ---
 
