@@ -13,11 +13,11 @@
 #' }
 #' @export
 mytheme <- theme(
-  axis.title = element_text(size = 15, face = "bold", family = "serif"),
+  axis.title = element_text(size = 15, face = "bold"),
   axis.line = element_line(linewidth = 1),
   axis.ticks = element_line(linewidth = 1.5),
-  axis.text = element_text(size = 15, face = "bold", colour = "black", family = "serif"),
-  text = element_text(size = 15, colour = "black", face = "bold", family = "serif")
+  axis.text = element_text(size = 15, face = "bold", colour = "black"),
+  text = element_text(size = 15, colour = "black", face = "bold")
 )
 
 #' Default discrete color palette

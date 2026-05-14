@@ -14,6 +14,8 @@
 #' @param pvalue_cut Numeric. P-value threshold for DEG filtering. Default is 0.05.
 #' @param data_dir Character. Root directory of TCGA data.
 #'   Default is \code{"F:/BioMed/预分析/data/TCGA"}.
+#' @param kegg_data_path Character. Path to KEGG GSON data file (.Rds) for offline enrichment.
+#'   Default is \code{"F:/BioMed/预分析/data/KEGG/KEGG_hsa_data.Rds"}.
 #' @param color_dis Character vector. Color palette. Defaults to \code{color_dis_default}.
 #'
 #' @return Invisibly returns a list containing \code{GO_result} and \code{KEGG_result}.
@@ -27,6 +29,7 @@
 #' @export
 Fig3_Enrich <- function(TCGA_pro = "LUAD", gene = "TP53",
                         gene_type = "mRNA", outdir = "./",
+                        kegg_data_path = "F:/BioMed/预分析/data/KEGG/KEGG_hsa_data.Rds",
                         plotWidth = NULL, plotHeight = 8,
                         logFC_cut = 0.58, pvalue_cut = 0.05,
                         data_dir = "F:/BioMed/预分析/data/TCGA",
@@ -112,10 +115,10 @@ Fig3_Enrich <- function(TCGA_pro = "LUAD", gene = "TP53",
     style = "g", width = wid, height = plotHeight
   )
 
-  options(timeout = 100000)
+   kk_gson<- readRDS(kegg_data_path)
   KEGG <- clusterProfiler::enrichKEGG(
     gene = keygene$ENTREZID,
-    organism = "hsa",
+    organism = kk_gson,
     universe = gene_df$ENTREZID,
     use_internal_data = FALSE
   )

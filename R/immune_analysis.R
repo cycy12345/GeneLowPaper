@@ -5,19 +5,15 @@
 #'
 #' @param gene Character. Target gene symbol.
 #' @param TCGA_pro Character. TCGA project abbreviation, e.g. \code{"LUAD"}.
-#' @param gene_type Character. Gene type: \code{"mrna"}, \code{"lncrna"}, or \code{"mirna"}.
-#'   Default is \code{"mrna"}.
+#' @param gene_type Character. Gene type: \code{"mrna"}, \code{"lncrna"}, or \code{"mirna"}. Default is \code{"mrna"}.
 #' @param outdir Character. Output directory. Default is \code{"./"}.
 #' @param plotWidth Numeric. Plot width. Default is 8.
 #' @param plotHeight Numeric. Plot height. Default is 6.
-#' @param corr_cut Numeric. Absolute correlation coefficient threshold for filtering.
-#'   Default is 0.3.
+#' @param corr_cut Numeric. Absolute correlation coefficient threshold for filtering. Default is 0.3.
 #' @param Imm_method Character. Immune deconvolution method. One of
 #'   \code{"mcpcounter"}, \code{"epic"}, \code{"xcell"}, \code{"cibersort"},
-#'   \code{"cibersort_abs"}, \code{"quantiseq"}, or \code{"timer"}.
-#'   Default is \code{"mcpcounter"}.
-#' @param data_dir Character. Root directory of TCGA data.
-#'   Default is \code{"F:/BioMed/预分析/data/TCGA"}.
+#'   \code{"cibersort_abs"}, \code{"quantiseq"}, or \code{"timer"}. Default is \code{"mcpcounter"}.
+#' @param data_dir Character. Root directory of TCGA data. Default is \code{"F:/BioMed/预分析/data/TCGA"}.
 #' @param color_dis Character vector. Color palette. Defaults to \code{color_dis_default}.
 #'
 #' @return Invisibly returns the filtered correlation data frame.
@@ -33,7 +29,7 @@ Fig5_ImmFil <- function(gene,
                         TCGA_pro = "LUAD",
                         gene_type = "mrna",
                         outdir = "./",
-                        plotWidth = 8,
+                        plotWidth = 6,
                         plotHeight = 6,
                         corr_cut = 0.3,
                         Imm_method = c("mcpcounter", "epic", "xcell", "cibersort",
@@ -200,9 +196,8 @@ Fig5_ImmFil <- function(gene,
 #'   Default is \code{"mrna"}.
 #' @param outdir Character. Output directory. Default is \code{"./"}.
 #' @param plotWidth Numeric. Plot width. Default is 6.
-#' @param plotHeight Numeric. Plot height. Default is 6.5.
-#' @param data_dir Character. Root directory of TCGA data.
-#'   Default is \code{"F:/BioMed/预分析/data/TCGA"}.
+#' @param plotHeight Numeric. Plot height. Default is 6.
+#' @param data_dir Character. Root directory of TCGA data. Default is \code{"F:/BioMed/预分析/data/TCGA"}.
 #' @param color_dis Character vector. Color palette. Defaults to \code{color_dis_default}.
 #'
 #' @return Invisibly returns a list with ESTIMATE and IPS results.
@@ -216,7 +211,7 @@ Fig5_Est_IPS <- function(gene,
                          gene_type = "mrna",
                          outdir = "./",
                          plotWidth = 6,
-                         plotHeight = 6.5,
+                         plotHeight = 6,
                          data_dir = "F:/BioMed/预分析/data/TCGA",
                          color_dis = color_dis_default) {
   outpath <- paste0(outdir, "/5_Fig/")
@@ -364,19 +359,16 @@ Fig5_Est_IPS <- function(gene,
 #'
 #' @param gene Character. Target gene symbol.
 #' @param TCGA_pro Character. TCGA project abbreviation. Default is \code{"LUAD"}.
-#' @param gene_type Character. Gene type: \code{"mrna"}, \code{"lncrna"}, or \code{"mirna"}.
-#'   Default is \code{"mrna"}.
+#' @param gene_type Character. Gene type: \code{"mrna"}, \code{"lncrna"}, or \code{"mirna"}. Default is \code{"mrna"}.
 #' @param cor_method Character. Correlation method: \code{"pearson"} or \code{"spearman"}.
 #'   Default is \code{"pearson"}.
 #' @param p_threshold Numeric. P-value threshold. Default is 0.05.
 #' @param r_threshold Numeric. Correlation coefficient threshold. Default is 0.
 #' @param outdir Character. Output directory. Default is \code{"./"}.
-#' @param plotWidth Numeric. Plot width. Default is 10.
-#' @param plotHeight Numeric. Plot height. Default is 10.
-#' @param data_dir Character. Root directory of TCGA data.
-#'   Default is \code{"F:/BioMed/预分析/data/TCGA"}.
-#' @param icc_path Character. Path to the immune checkpoint gene list CSV.
-#'   Default is \code{"F:/BioMed/预分析/data/IGG79Gene.csv"}.
+#' @param plotWidth Numeric. Plot width. Default is 6.
+#' @param plotHeight Numeric. Plot height. Default is 6.
+#' @param data_dir Character. Root directory of TCGA data. Default is \code{"F:/BioMed/预分析/data/TCGA"}.
+#' @param icc_path Character. Path to the immune checkpoint gene list CSV. Default is \code{"F:/BioMed/预分析/data/IGG79Gene.csv"}.
 #' @param color_dis Character vector. Color palette. Defaults to \code{color_dis_default}.
 #'
 #' @return Invisibly returns a list with full and significant correlation tables,
@@ -393,8 +385,8 @@ Fig5_ICC_cor <- function(gene,
                          p_threshold = 0.05,
                          r_threshold = 0,
                          outdir = "./",
-                         plotWidth = 10,
-                         plotHeight = 10,
+                         plotWidth = 6,
+                         plotHeight = 6,
                          data_dir = "F:/BioMed/预分析/data/TCGA",
                          icc_path = "F:/BioMed/预分析/data/IGG79Gene.csv",
                          color_dis = color_dis_default) {
